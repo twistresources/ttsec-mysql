@@ -1,0 +1,11 @@
+<xpcConfig>
+        <userType name="ls.phinza">
+                <description>Users</description>
+                <securityPluggin>tooltwist.ttsec_mysql.UserSecurityPlugin</securityPluggin>
+        </userType>
+
+        <userType name="phinza">
+                <description>Users</description>
+                <securityPluggin>tooltwist.ttsec_mysql.UserSecurityPlugin</securityPluggin>
+        </userType>
+</xpcConfig>
