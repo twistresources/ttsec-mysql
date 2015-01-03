@@ -12,7 +12,8 @@ import java.util.List;
 
 import javax.servlet.ServletException;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import tooltwist.basic.AuthConfigSingleton;
 import tooltwist.misc.MiscInternal;
@@ -25,7 +26,7 @@ import tooltwist.misc.TtConfig;
  */
 public class UserSecurityPlugin extends XpcSecurityImpl // implements XpcSecurityPluggin, XpcSecurityAccessController
 {
-	static Logger logger = Logger.getLogger(UserSecurityPlugin.class);
+	static Logger logger = LoggerFactory.getLogger(UserSecurityPlugin.class);
 	public static final String USERTYPE_CUSTOMER = "C"; // coCustomerMaster
 	public static final String USERTYPE_EMPLOYEE = "E"; // coEmployee
 	public static final String USERTYPE_SUPPLIER = "S"; // coSupplierMaster
@@ -397,13 +398,13 @@ public class UserSecurityPlugin extends XpcSecurityImpl // implements XpcSecurit
 		}
 		catch (java.sql.SQLException e)
 		{
-			logger.debug("SQLException " + e);
+			logger.error("SQLException " + e);
 			throw new XpcException(this.getClass().getName() + ": Could not validate login: " + e);
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
-			logger.debug(e);
+			logger.error("Error loading security details from database", e);
 		}
 		finally
 		{
