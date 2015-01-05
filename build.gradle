@@ -1,51 +1,37 @@
 apply plugin: 'java'
-apply plugin: 'eclipse'
+apply plugin: 'eclipse-wtp'
 apply plugin: 'artifactory'
 apply plugin: 'maven' // so a POM file can be uploaded to repo
 
 
-/*************************************************************************************************
- *
- *	Gradle lacks the "provided" dependency of Maven so we'll have to add it.
- *	https://github.com/spring-projects/gradle-plugins/tree/master/propdeps-plugin
- *	http://blog.codeaholics.org/2012/emulating-mavens-provided-scope-in-gradle/
- */
-buildscript {
-    repositories {
-        maven { url 'http://repo.springsource.org/plugins-release' }
-    }
-    dependencies {
-        classpath 'org.springframework.build.gradle:propdeps-plugin:0.0.4'
-    }
-}
-configure(allprojects) {
-    apply plugin: 'propdeps-eclipse'
-}
+
+//----------------------------------------------------------------------
+// Gradle lacks the "provided" dependency so we'll have to add it.
+// http://blog.codeaholics.org/2012/emulating-mavens-provided-scope-in-gradle/
 configurations {
 	provided
+	published
 }
 sourceSets {
     main.compileClasspath += configurations.provided
     test.compileClasspath += configurations.provided
     test.runtimeClasspath += configurations.provided
 }
-
-
 //----------------------------------------------------------------------
-// Dependencies for this project
-//
+
+
 dependencies {
 	/* Build using standard ToolTwist libraries
-   */
-  compile group: 'com.tooltwist', name: 'xdata', version: '5.0.0'
-  compile group: 'com.tooltwist', name: 'tooltwist', version: '8.4.0-SNAPSHOT'
+	*/
+	compile group: 'com.tooltwist', name: 'xdata', version: '5.0.0'
+	compile group: 'com.tooltwist', name: 'tooltwist', version: '8.4.0-SNAPSHOT'
 	compile group: 'com.tooltwist', name: 'ttStd', version: '8.4.0-SNAPSHOT'
 
 	/* Build using ToolTwist source code
 	compile project(':tooltwist')
 	compile project(':ttWbd')
 	compile project(':xdata')
-   */
+	*/
 
 	// Dependancies
 
@@ -59,13 +45,21 @@ dependencies {
 
 /**************************************************************************************************
  *
- *	NOTE: Standard code from here on down. (Phil-2014-06-03)
+ *	NOTE: Standard code from here on down. (Phil-2014-11-25)
  *
- *	Values defined in ../gradle.properties:
- *		PROJECT_GROUP, PROJECT_SOURCE_COMPATIBILITY, PROJECT_VERSION, PROJECT_REPO
+ *	Values defined in ./gradle.properties:
+ *		PROJECT_GROUP
+ *		PROJECT_VERSION
+ *		PROJECT_SOURCE_COMPATIBILITY
+ *		PUBLISH_CONTEXTURL
+ *		PUBLISH_SNAPSHOT_REPO
+ *		PUBLISH_RELEASE_REPO
  *
  *	Values defined in ~/.gradle/gradle.properties:
- *		artifactory_user, artifactory_password, artifactory_repo
+ *		RESOLVE_CONTEXTURL
+ *		RESOLVE_REPO
+ *		ARTIFACTORY_USER
+ *		ARTIFACTORY_PASSWORD
  */
 group = PROJECT_GROUP
 version = PROJECT_VERSION
@@ -77,14 +71,7 @@ project.ext.isSnapshot = version.endsWith("-SNAPSHOT")
 // Include jars for the artifactory plugin
 buildscript {
     repositories {
-        maven {
-            url TOOLTWIST_ARTIFACTORY_CONTEXTURL + TOOLTWIST_ARTIFACTORY_REPO
-            credentials {
-                username = "${TOOLTWIST_ARTIFACTORY_USER}"
-                password = "${TOOLTWIST_ARTIFACTORY_PASSWORD}"
-            }
-	}
-	mavenCentral()
+        maven { url 'http://jcenter.bintray.com' }
     }
     dependencies {
         classpath(group: 'org.jfrog.buildinfo', name: 'build-info-extractor-gradle', version: '2.0.9')
@@ -97,22 +84,22 @@ configurations {
 
 artifactory {
     publish {
-        repository {
-            contextUrl = "${PUBLISH_CONTEXTURL}"
-            repoKey = isSnapshot ? "${PUBLISH_SNAPSHOT_REPO}" : "${PUBLISH_RELEASE_REPO}"
-            username = "${ARTIFACTORY_USER}"
-            password = "${ARTIFACTORY_PASSWORD}"
-            maven = true
-	    ivy {
-	      ivyLayout = '[organization]/[module]/ivy-[revision].xml'
-	      artifactLayout = '[organization]/[module]/[revision]/[module]-[revision](-[classifier]).[ext]'
-	      mavenCompatible = true
+      repository {
+        contextUrl = "${PUBLISH_CONTEXTURL}"
+        repoKey = isSnapshot ? "${PUBLISH_SNAPSHOT_REPO}" : "${PUBLISH_RELEASE_REPO}"
+        username = "${ARTIFACTORY_USER}"
+        password = "${ARTIFACTORY_PASSWORD}"
+        maven = true
+		    ivy {
+		      ivyLayout = '[organization]/[module]/ivy-[revision].xml'
+		      artifactLayout = '[organization]/[module]/[revision]/[module]-[revision](-[classifier]).[ext]'
+		      mavenCompatible = true
+		    }
 	    }
-        }
-	defaults {
-	    publishConfigs('archives', 'published')
-	    properties = ['build.status': "$it.project.status".toString()]
-	}
+			defaults {
+			    publishConfigs('archives', 'published')
+			    properties = ['build.status': "$it.project.status".toString()]
+			}
     }
     resolve {
         repository {
@@ -122,6 +109,14 @@ artifactory {
             password = "${ARTIFACTORY_PASSWORD}"
             maven = true
         }
+    }
+}
+
+// Note that tests only get run when the code changes
+test {
+    testLogging {
+	    // Show that tests are run in the command-line output
+			events "passed", "skipped", "failed"
     }
 }
 
