@@ -2,26 +2,82 @@
 <classpath>
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="src" path="src/main/test"/>
-	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/com.tooltwist/xdata/5.0.0/a15f28f15351b33d4206877e4e9f1f49ad77bd95/xdata-5.0.0.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/com.tooltwist/tooltwist/8.4.0-SNAPSHOT/d2633b15480a8920b72ec711dbf652ad5c0787ba/tooltwist-8.4.0-SNAPSHOT.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/com.tooltwist/ttStd/8.4.0-SNAPSHOT/59358ca72e72bc748a2c834a5f6e2e4e4531d352/ttStd-8.4.0-SNAPSHOT.jar"/>
 	<classpathentry kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/javax/javaee-api/6.0/d6f416983ea13c334d5c599a9045414ecaf5d66d/javaee-api-6.0.jar"/>
-	<classpathentry kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/junit/junit/4.8.2/c94f54227b08100974c36170dcb53329435fe5ad/junit-4.8.2.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/junit/junit/4.8.2/cccca612a66b8387c399be31d69daf000de2ac9e/junit-4.8.2-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/1.3.04/90b215f48fe42776c8c7f6e3509ec54e84fd65ef/xml-apis-1.3.04.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/1.3.04/d89105ccbe3fd823865330fd964233baf2b53e88/xml-apis-1.3.04-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/xalan/serializer/2.7.1/4b4b18df434451249bb65a63f2fb69e215a6a020/serializer-2.7.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/xalan/xalan/2.7.1/75f1d83ce27bab5f29fff034fc74aa9f7266f22a/xalan-2.7.1.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/xalan/xalan/2.7.1/b1f9b407f3593c99ae2b137bb0733761fcee6595/xalan-2.7.1-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/0.9.30/38099654319cb6c81f8390465a7a5bb8c26fd979/logback-core-0.9.30.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/0.9.30/bc928078b39f33373c41c00ab11ceab994f3d417/logback-core-0.9.30-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/com.tooltwist/filemap/5.0.0/88e2c521923632c685495faceb31241de42d883f/filemap-5.0.0.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.8/af3be3f74d25fc5163b54f56a0d394b462dafafd/commons-codec-1.8.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.8/ea7b97bfc46dc4b28bc53af3e530199a657933bf/commons-codec-1.8-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.0.4/f029a2aefe2b3e1517573c580f948caac31b1056/commons-logging-1.0.4.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.0.4/8d3424a318e818f88568dfb3b55c58583364ba9/commons-logging-1.0.4-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/commons-httpclient/commons-httpclient/3.1/964cd74171f427720480efdec40a7c7f6e58426a/commons-httpclient-3.1.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/commons-httpclient/commons-httpclient/3.1/8f95b134ed1222d9ea5c0c34cdad0b470fa9bf9d/commons-httpclient-3.1-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/commons-fileupload/commons-fileupload/1.2.2/1e48256a2341047e7d729217adeec8217f6e3a1a/commons-fileupload-1.2.2.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/commons-fileupload/commons-fileupload/1.2.2/8c269e2558e16ae7bab69df299d51f291a09eea0/commons-fileupload-1.2.2-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.6.2/8619e95939167fb37245b5670135e4feb0ec7d50/slf4j-api-1.6.2.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.6.2/6b5f6572792e2192ecf714ea12ae894b0fbcf750/slf4j-api-1.6.2-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/0.9.30/3dc754111cfa4cb622a973cd8244378a4bf56612/logback-classic-0.9.30.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/0.9.30/449fc54aa4863fbe4657d724e5d1f77ba2a2b369/logback-classic-0.9.30-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/net.sourceforge.jexcelapi/jxl/2.6/74e55eae5ef7d003167a459965b99239ac6e6b02/jxl-2.6.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/javax.activation/activation/1.1/e6cb541461c2834bdea3eb920f1884d1eb508b50/activation-1.1.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/javax.activation/activation/1.1/3697e9f67a2ed7ac5f589cff30f21173299440/activation-1.1-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/javax.mail/mail/1.4.6/383bdbd7b4bc3e7960370db219f883b4062fc1ca/mail-1.4.6.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/javax.mail/mail/1.4.6/8ddcd26291a284821bc93a342733bea80cc65db7/mail-1.4.6-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/com.tooltwist/tooltwist-legacy/8.4.0-SNAPSHOT/8f45acdc2a03d603b1a7638701bf728b44e90f65/tooltwist-legacy-8.4.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/junit/junit/4.8.2/c94f54227b08100974c36170dcb53329435fe5ad/junit-4.8.2.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/junit/junit/4.8.2/cccca612a66b8387c399be31d69daf000de2ac9e/junit-4.8.2-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/1.3.04/90b215f48fe42776c8c7f6e3509ec54e84fd65ef/xml-apis-1.3.04.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/xml-apis/xml-apis/1.3.04/d89105ccbe3fd823865330fd964233baf2b53e88/xml-apis-1.3.04-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/xalan/serializer/2.7.1/4b4b18df434451249bb65a63f2fb69e215a6a020/serializer-2.7.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/xalan/xalan/2.7.1/75f1d83ce27bab5f29fff034fc74aa9f7266f22a/xalan-2.7.1.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/xalan/xalan/2.7.1/b1f9b407f3593c99ae2b137bb0733761fcee6595/xalan-2.7.1-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/0.9.30/38099654319cb6c81f8390465a7a5bb8c26fd979/logback-core-0.9.30.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/0.9.30/bc928078b39f33373c41c00ab11ceab994f3d417/logback-core-0.9.30-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.8/af3be3f74d25fc5163b54f56a0d394b462dafafd/commons-codec-1.8.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.8/ea7b97bfc46dc4b28bc53af3e530199a657933bf/commons-codec-1.8-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.0.4/f029a2aefe2b3e1517573c580f948caac31b1056/commons-logging-1.0.4.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.0.4/8d3424a318e818f88568dfb3b55c58583364ba9/commons-logging-1.0.4-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/commons-httpclient/commons-httpclient/3.1/964cd74171f427720480efdec40a7c7f6e58426a/commons-httpclient-3.1.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/commons-httpclient/commons-httpclient/3.1/8f95b134ed1222d9ea5c0c34cdad0b470fa9bf9d/commons-httpclient-3.1-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/commons-fileupload/commons-fileupload/1.2.2/1e48256a2341047e7d729217adeec8217f6e3a1a/commons-fileupload-1.2.2.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/commons-fileupload/commons-fileupload/1.2.2/8c269e2558e16ae7bab69df299d51f291a09eea0/commons-fileupload-1.2.2-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.6.2/8619e95939167fb37245b5670135e4feb0ec7d50/slf4j-api-1.6.2.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.6.2/6b5f6572792e2192ecf714ea12ae894b0fbcf750/slf4j-api-1.6.2-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/0.9.30/3dc754111cfa4cb622a973cd8244378a4bf56612/logback-classic-0.9.30.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/0.9.30/449fc54aa4863fbe4657d724e5d1f77ba2a2b369/logback-classic-0.9.30-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/net.sourceforge.jexcelapi/jxl/2.6/74e55eae5ef7d003167a459965b99239ac6e6b02/jxl-2.6.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/javax.activation/activation/1.1/e6cb541461c2834bdea3eb920f1884d1eb508b50/activation-1.1.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/javax.activation/activation/1.1/3697e9f67a2ed7ac5f589cff30f21173299440/activation-1.1-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/javax.mail/mail/1.4.6/383bdbd7b4bc3e7960370db219f883b4062fc1ca/mail-1.4.6.jar" sourcepath="/Users/philipcallender/.gradle/caches/modules-2/files-2.1/javax.mail/mail/1.4.6/8ddcd26291a284821bc93a342733bea80cc65db7/mail-1.4.6-sources.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="../"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/filemap"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/tooltwist"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/tooltwist-legacy"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ttWbd"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/xdata"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
